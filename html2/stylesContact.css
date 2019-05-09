@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  background-color: white;
+  background-size: cover;
+  height: 100vh;
+}
+
+.wrapper{
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  width: 100%;
+  padding: 0 20px;
+}
+
+.contact-form{
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(192,192,192);
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(128,0,0);
+}
+
+.input-fields{
+  display: flex;
+  flex-direction: column;
+  margin-right: 20%;
+}
+
+.input-fields,
+.msg{
+  width: 60%;
+}
+.msg{
+  width: 140%;
+  height: 200px;
+  margin-left: -50%;
+}
+.input-fields .input,
+.msg textarea{
+  margin: 10px 0;
+  background: transparent;
+  border: 0px;
+  border-bottom: 2px solid #FFF;
+  padding: 10px;
+  color: #FFF;
+  width: 100%;
+}
+
+.msg textarea{
+  height: 250px;
+}
+<!--
+::-webkit-input-name {
+  /* Chrome/Opera/Safari */
+  color: #FFF;
+}
+::-moz-name {
+  /* Firefox 19+ */
+  color: #FFF;
+}
+:-ms-input-name {
+  /* IE 10+ */
+  color: #FFF;
+
+
+.btn {
+    background: #FFF;
+    text-align: center;
+    top: 60%;<!--- Fix button position change direction-->
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px){
+  .contact-form{
+    flex-direction: column;
+  }
+  .msg textarea{
+    height: 80px;
+  }
+  .input-fields,
+  .msg{
+    width: 100%;
+  }
+}
