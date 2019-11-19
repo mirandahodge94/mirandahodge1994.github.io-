@@ -1,0 +1,1183 @@
+<meta name="robots" content="noindex">
+<style id="jsbin-css">
+html,
+body {
+  background-color: #ccffff;
+  padding: 0;
+  margin: 0;
+}
+.wrap {
+  font: 20px Arial, san-serif;
+}
+h1.likert-header {
+text-align:center;
+  padding-left: 25.25%;
+  margin: 20px 0 0;
+}
+h2.likert-header2{
+text-align:center;
+color:purple;
+  //padding-left: 25.25%;
+  margin: 40px 0 0;
+}
+form .statement {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  text-align:center;
+  padding: 20px 0 0 0.0%;
+  margin-bottom: 10px;
+}
+form .likert {
+  list-style: none;
+  width: 80%;
+  margin: 60;
+  padding: 0 0 60px;
+  display: block;
+  border-bottom: 2px solid #efefef;
+}
+form .likert:last-of-type {
+  border-bottom: 0;
+}
+form .likert:before {
+  content: '';
+  position: relative;
+  top: 11px;
+  left: 3%;
+  display: block;
+  background-color: purple;
+  height: 4px;
+  width: 90%; //used to alter the lengeth of the board
+}
+form .likert li {
+  display: inline-block;
+  width: 16%; //alters word location
+  text-align: center;
+  vertical-align: top;
+}
+form .likert li input[type=radio] {
+  display: block;
+  position: relative;
+  top: 0;
+  left: 13.5%;
+  margin-left: px;
+}
+form .likert li label {
+  width: 100%;
+}
+form .buttons {
+  margin: 30px 0;
+  padding: 0 4.25%;
+  text-align: left //change location of clear/ submit button 
+}
+form .buttons button {
+  padding: 5px 10px;
+  background-color: #67ab49; // change color of button
+  border: 0;
+  border-radius: 3px;
+}
+form .buttons .clear {
+  background-color: #e9e9e9;
+}
+form .buttons .submit {
+  background-color: #67ab49;
+}
+form .buttons .clear:hover {
+  background-color: #ccc;
+}
+form .buttons .submit:hover {
+  background-color: #14892c;
+}
+box .body
+{
+  margin:0;
+  padding:0;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  font-family:San serif;
+}
+h1
+{
+  width: 700px;
+  align-items:center;
+color: purple;
+}
+.box
+{
+  width: 500px;
+  padding: 20px 0 0 30.25%;
+}
+  p
+{
+    margin: 20;
+    padding:0;
+   font-size: 24px; 
+}
+.rating
+{
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 10px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  background:linear-gradient(to left, #f00, #ff0, #0f0);
+}
+.rating input
+{
+  display:none;
+  
+}
+  .rating label
+  {
+    display: block;
+    cursor:pointer;
+    width: 50px;
+    height: 40px
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    transition 0.5s;
+    background:#fff;
+    color:#000;
+    font-size:20px;
+    border-right:1px solid #000;
+  }
+  .rating input[type="radio"]:hover~ label,
+  .rating input[type="radio"]:checked~ label
+  {
+    background:transparent;
+}
+ .comments p1{
+   color:Purple;
+   font: 20px Arial, san-serif;
+  
+}
+ .comments p2{
+ color:Purple;
+font: 20px Arial, san-serif
+}
+    
+  }
+</style>
+<div class="wrap">
+  <h1 class="likert-header">PAZ Survey 2019</h1>
+  
+<h2 class="likert-header2">CAPlink Search Function</h2>
+ <label class="statement">1. &nbsp &nbsp I can easily search and find new people in CAPlink</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert" value=“strongly_agree">
+        <label>Strongly agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert" value=“_Agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert" value=“_Neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert" value=“_Disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert" value=“strongly_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert" value=“Not Applicable">
+        <label>Not Applicable</label>
+      </li>
+    </ul>
+    <label class="statement">2.&nbsp &nbsp When encountering duplicate people records, it is easy for me to determine which profile to use </label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert_1" value=“strongly_agree">
+        <label>Strongly agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_1" value=“_Agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_1" value=“_Neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_1" value=“_Disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_1" value=“strongly_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_1" value=“Not Applicable">
+        <label>Not Applicable</label>
+      </li>
+    </ul>
+<h2 class="likert-header2">CAPlink Family Contact Information Update Function</h2>
+    <label class="statement">3.&nbsp &nbsp Updating the phone number, address and email is difficult </label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert_2" value=“strongly_agree">
+        <label>Strongly agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_2" value=“_Agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_2" value=“_Neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_2" value=“_Disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_2" value=“strongly_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_2" value=“Not Applicable">
+        <label>Not Applicable</label>
+      </li>
+    </ul>
+    <label class="statement">4.&nbsp &nbsp I know how to add a new family member to an existing family </label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert_3" value=“strongly_agree">
+        <label>Strongly agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_3" value=“_Agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_3" value=“_Neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_3" value=“_Disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_3" value=“strongly_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_3" value=“Not Applicable">
+        <label>Not Applicable</label>
+      </li>
+    </ul>
+    <label class="statement">5.&nbsp &nbsp I often encounter incorrect family members within a household
+      .</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert_4" value=“strongly_agree">
+        <label>Strongly agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_4" value=“_Agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_4" value=“_Neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_4" value=“_Disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert" value=“strongly_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_4" value=“Not Applicable">
+        <label>Not Applicable</label>
+      </li>
+    </ul>
+<h2 class="likert-header2">CAPlink Referral Function</h2>
+    <label class="statement">6. &nbsp &nbsp I can easily send and receive referrals </label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert_5" value=“strongly_agree">
+        <label>Strongly agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_5" value=“_Agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_5" value=“_Neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_5" value=“_Disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_5" value=“strongly_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_5" value=“Not Applicable">
+        <label>Not Applicable</label>
+      </li>
+    </ul>
+    <label class="statement">7.&nbsp &nbsp I often have trouble updating a referrals’ status</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert_6" value=“strongly_agree">
+        <label>Strongly agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_6" value=“_Agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_6" value=“_Neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_6" value=“_Disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_6" value=“strongly_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_6" value=“Not Applicable">
+        <label>Not Applicable</label>
+      </li>
+    </ul>
+    <label class="statement">8. &nbsp &nbsp The referral module captures all necessary information to complete my job</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert_7" value=“strongly_agree">
+        <label>Strongly agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_7" value=“_Agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_7" value=“_Neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_7" value=“_Disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_7" value=“strongly_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_7" value=“Not Applicable">
+        <label>Not Applicable</label>
+      </li>
+    </ul>
+    <label class="statement">9. &nbsp &nbsp The referral status options help me track the progress of a referral</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert_8" value=“strongly_agree">
+        <label>Strongly agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_8" value=“_Agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_8" value=“_Neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_8" value=“_Disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_8" value=“strongly_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_8" value=“Not Applicable">
+        <label>Not Applicable</label>
+      </li>
+    </ul>
+<h2 class="likert-header2">CAPlink Appointment Function</h2>
+    <label class="statement">10. &nbsp &nbspThe appointment function allows me to capture all details for parent coaching meetings.</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert_9" value=“strongly_agree">
+        <label>Strongly agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_9" value=“_Agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_9" value=“_Neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_9" value=“_Disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_9" value=“strongly_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_9" value=“Not Applicable">
+        <label>Not Applicable</label>
+      </li>
+    </ul>
+    <label class="statement">11. &nbsp &nbsp Creating a new appointment have proven to be easy</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert_10" value=“strongly_agree">
+        <label>Strongly agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_10" value=“_Agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_10" value=“_Neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_10" value=“_Disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_10" value=“strongly_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_10" value=“Not Applicable">
+        <label>Not Applicable</label>
+      </li>
+    </ul>
+<h2 class="likert-header2">CAPlink Goals and STPO’s Function</h2>
+    <label class="statement">12. &nbsp &nbspSTPOs accurately capture parent achievement milestones.</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert_11" value=“strongly_agree">
+        <label>Strongly agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_11" value=“_Agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_11" value=“_Neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_11" value=“_Disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_11" value=“strongly_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_11" value=“Not Applicable">
+        <label>Not Applicable</label>
+      </li>
+    </ul>
+    <label class="statement">13. &nbsp &nbsp Adding an STPO is easy to do</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert_12" value=“strongly_agree">
+        <label>Strongly agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_12" value=“_Agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_12" value=“_Neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_12" value=“_Disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_12" value=“strongly_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_12" value=“Not Applicable">
+        <label>Not Applicable</label>
+      </li>
+    </ul>
+    <label class="statement">14. &nbsp &nbsp CAPlink is setup for the appropriate goals and stops for my coaching area.</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert_13" value=“strongly_agree">
+        <label>Strongly agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_13" value=“_Agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_13" value=“_Neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_13" value=“_Disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_13" value=“strongly_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_13" value=“Not Applicable">
+        <label>Not Applicable</label>
+      </li>
+    </ul>
+    <label class="statement">15. &nbsp &nbsp The CAPlink Goal/STPO system allows me to easily see parent milestones</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert_14" value=“strongly_agree">
+        <label>Strongly agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_14" value=“_Agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_14" value=“_Neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_14" value=“_Disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_14" value=“strongly_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_14" value=“Not Applicable">
+        <label>Not Applicable</label>
+      </li>
+    </ul>
+<h2 class="likert-header2">PAZ Enrollment Process</h2>
+    <label class="statement">16. &nbsp &nbsp I can easily find PAZ enrollment documents.</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert_15" value=“strongly_agree">
+        <label>Strongly agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_15" value=“_Agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_15" value=“_Neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_15" value=“_Disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_15" value=“strongly_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_15" value=“Not Applicable">
+        <label>Not Applicable</label>
+      </li>
+    </ul>
+    <label class="statement">17. &nbsp &nbsp I understand how to use Intralinks</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert_16" value=“strongly_agree">
+        <label>Strongly agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_16" value=“_Agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_16" value=“_Neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_16" value=“_Disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_16" value=“strongly_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_16" value=“Not Applicable">
+        <label>Not Applicable</label>
+      </li>
+    </ul>
+    <label class="statement">18. &nbsp &nbsp I know how to enter in all enrollment data</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert_17" value=“strongly_agree">
+        <label>Strongly agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_17" value=“_Agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_17" value=“_Neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_17" value=“_Disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_17" value=“strongly_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_17" value=“Not Applicable">
+        <label>Not Applicable</label>
+      </li>
+    </ul>
+    <label class="statement">19. &nbsp &nbsp The enrollment process steps are easy to follow</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert_18" value=“strongly_agree">
+        <label>Strongly agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_18" value=“_Agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_18" value=“_Neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_18" value=“_Disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_18" value=“strongly_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_18" value=“Not Applicable">
+        <label>Not Applicable</label>
+      </li>
+    </ul>
+<h2 class="likert-header2">CAPlink Embedded Data Reports & Upgrades</h2>
+    <label class="statement">20. &nbsp &nbsp PAZ data reports help me to manage my caseload</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert_19" value=“strongly_agree">
+        <label>Strongly agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_19" value=“_Agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_19" value=“_Neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_19" value=“_Disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_19" value=“strongly_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_19" value=“Not Applicable">
+        <label>Not Applicable</label>
+      </li>
+    </ul>
+    <label class="statement">21. &nbsp &nbsp I use the PAZ data reports to track my referrals</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert_20" value=“strongly_agree">
+        <label>Strongly agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_20" value=“_Agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_20" value=“_Neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_20" value=“_Disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_20" value=“strongly_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_20" value=“Not Applicable">
+        <label>Not Applicable</label>
+      </li>
+    </ul>
+    <label class="statement">22. &nbsp &nbsp I would like more information on how to use the PAZ reports</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert_21" value=“strongly_agree">
+        <label>Strongly agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_21" value=“_Agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_21" value=“_Neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_21" value=“_Disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_21" value=“strongly_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_21" value=“Not Applicable">
+        <label>Not Applicable</label>
+      </li>
+    </ul>
+    <label class="statement">23. &nbsp &nbsp CAPLink upgrades have made it easier for me to enter data</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert_22" value=“strongly_agree">
+        <label>Strongly agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_22" value=“_Agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_22" value=“_Neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_22" value=“_Disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_22" value=“strongly_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_22" value=“Not Applicable">
+        <label>Not Applicable</label>
+      </li>
+    </ul>
+    <label class="statement">24. &nbsp &nbsp I can navigate through CapLink more efficiently because of experience rather than the upgrade</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert_23" value=“strongly_agree">
+        <label>Strongly agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_23" value=“_Agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_23" value=“_Neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_23" value=“_Disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_23" value=“strongly_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_23" value=“Not Applicable">
+        <label>Not Applicable</label>
+      </li>
+    </ul>
+<h2 class="likert-header2">FormSite</h2>
+    <label class="statement">25. &nbsp &nbsp Inputting data into formsite takes no time at all</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert_24" value=“strongly_agree">
+        <label>Strongly agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_24" value=“_Agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_24" value=“_Neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_24" value=“_Disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_24" value=“strongly_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_24" value=“Not Applicable">
+        <label>Not Applicable</label>
+      </li>
+    </ul>
+    <label class="statement">26. &nbsp &nbsp I have trouble finding the correct survey to use</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert_25" value=“strongly_agree">
+        <label>Strongly agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_25" value=“_Agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_25" value=“_Neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_25" value=“_Disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_25" value=“strongly_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_25" value=“Not Applicable">
+        <label>Not Applicable</label>
+      </li>
+    </ul>
+    <label class="statement">27. &nbsp &nbsp Using the surveys gives me a better understanding of parent data</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="likert_26" value=“strongly_agree">
+        <label>Strongly agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_26" value=“_Agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_26" value=“_Neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_26" value=“_Disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_26" value=“strongly_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert_26" value=“Not Applicable">
+        <label>Not Applicable</label>
+      </li>
+    </ul>
+  
+</div>
+<div class="box">
+<h1>
+From 1- 10 where 1 being the least difficult and 10 being the most: please answer the following:
+</h1>
+<p>
+1. &nbsp &nbsp Enrollment process - entry into CAPlink 
+ </p>
+ <div class ="rating">
+ <input type="radio" name="rating" id="rate10"><label for="rate10"
+ >10</label>
+ <input type="radio" name="rating" id="rate9"><label for="rate9"
+ >9</label>
+ <input type="radio" name="rating" id="rate8"><label for="rate8"
+ >8</label>
+ <input type="radio" name="rating" id="rate7"><label for="rate7"
+ >7</label>
+ <input type="radio" name="rating" id="rate6"><label for="rate6"
+ >6</label>
+ <input type="radio" name="rating" id="rate5"><label for="rate5"
+ >5</label>
+ <input type="radio" name="rating" id="rate4"><label for="rate4"
+ >4</label>
+ <input type="radio" name="rating" id="rate3"><label for="rate3"
+ >3</label>
+ <input type="radio" name="rating" id="rate2"><label for="rate2"
+ >2</label>
+ <input type="radio" name="rating" id="rate1"><label for="rate1"
+ >1</label>
+ </div>
+ 
+ <p>
+2. &nbsp &nbsp Enrollment process - knowing when to update enrollment   
+ </p>
+ <div class ="rating">
+ <input type="radio" name="rating1" id="rate10a"><label for="rate10a"
+ >10</label>
+ <input type="radio" name="rating1" id="rate9a"><label for="rate9a"
+ >9</label>
+ <input type="radio" name="rating1" id="rate8a"><label for="rate8a"
+ >8</label>
+ <input type="radio" name="rating1" id="rate7a"><label for="rate7a"
+ >7</label>
+ <input type="radio" name="rating1" id="rate6a"><label for="rate6a"
+ >6</label>
+ <input type="radio" name="rating1" id="rate5a"><label for="rate5a"
+ >5</label>
+ <input type="radio" name="rating1" id="rate4a"><label for="rate4a"
+ >4</label>
+ <input type="radio" name="rating1" id="rate3a"><label for="rate3a"
+ >3</label>
+ <input type="radio" name="rating1" id="rate2a"><label for="rate2a"
+ >2</label>
+ <input type="radio" name="rating1" id="rate1a"><label for="rate1a"
+ >1</label>
+ </div>
+ <p>
+3. &nbsp &nbsp Documentation - scanning into Intralinks 
+ </p>
+ <div class ="rating">
+ <input type="radio" name="rating2" id="rate10b"><label for="rate10b"
+ >10</label>
+ <input type="radio" name="rating2" id="rate9b"><label for="rate9b"
+ >9</label>
+ <input type="radio" name="rating2" id="rate8b"><label for="rate8b"
+ >8</label>
+ <input type="radio" name="rating2" id="rate7b"><label for="rate7b"
+ >7</label>
+ <input type="radio" name="rating2" id="rate6b"><label for="rate6b"
+ >6</label>
+ <input type="radio" name="rating2" id="rate5b"><label for="rate5b"
+ >5</label>
+ <input type="radio" name="rating2" id="rate4b"><label for="rate4b"
+ >4</label>
+ <input type="radio" name="rating2" id="rate3b"><label for="rate3b"
+ >3</label>
+ <input type="radio" name="rating2" id="rate2b"><label for="rate2b"
+ >2</label>
+ <input type="radio" name="rating2" id="rate1b"><label for="rate1b"
+ >1</label>
+  </div>
+ <p>
+4. &nbsp &nbsp PAZ Data - reading embedded PAZ reports 
+ </p>
+ <div class ="rating">
+ <input type="radio" name="rating3" id="rate10c"><label for="rate10c"
+ >10</label>
+ <input type="radio" name="rating3" id="rate9c"><label for="rate9c"
+ >9</label>
+ <input type="radio" name="rating3" id="rate8c"><label for="rate8c"
+ >8</label>
+ <input type="radio" name="rating3" id="rate7c"><label for="rate7c"
+ >7</label>
+ <input type="radio" name="rating3" id="rate6c"><label for="rate6c"
+ >6</label>
+ <input type="radio" name="rating3" id="rate5c"><label for="rate5c"
+ >5</label>
+ <input type="radio" name="rating3" id="rate4c"><label for="rate4c"
+ >4</label>
+ <input type="radio" name="rating3" id="rate3c"><label for="rate3c"
+ >3</label>
+ <input type="radio" name="rating3" id="rate2c"><label for="rate2c"
+ >2</label>
+ <input type="radio" name="rating3" id="rate1c"><label for="rate1c"
+ >1</label>
+ 
+  </div>
+ <p>
+5. &nbsp &nbsp Enrollment process - access to documents 
+ </p>
+ <div class ="rating">
+ <input type="radio" name="rating4" id="rate10d"><label for="rate10d"
+ >10</label>
+ <input type="radio" name="rating4" id="rate9d"><label for="rate9d"
+ >9</label>
+ <input type="radio" name="rating4" id="rate8d"><label for="rate8d"
+ >8</label>
+ <input type="radio" name="rating4" id="rate7d"><label for="rate7d"
+ >7</label>
+ <input type="radio" name="rating4" id="rate6d"><label for="rate6d"
+ >6</label>
+ <input type="radio" name="rating4" id="rate5d"><label for="rate5d"
+ >5</label>
+ <input type="radio" name="rating4" id="rate4d"><label for="rate4d"
+ >4</label>
+ <input type="radio" name="rating4" id="rate3d"><label for="rate3d"
+ >3</label>
+ <input type="radio" name="rating4" id="rate2d"><label for="rate2d"
+ >2</label>
+ <input type="radio" name="rating4" id="rate1d"><label for="rate1d"
+ >1</label>
+ 
+  </div>
+ <p>
+6. &nbsp &nbsp Group event data - sending data for entry 
+ </p>
+ <div class ="rating">
+ <input type="radio" name="rating5" id="rate10e"><label for="rate10e"
+ >10</label>
+ <input type="radio" name="rating5" id="rate9e"><label for="rate9e"
+ >9</label>
+ <input type="radio" name="rating5" id="rate8e"><label for="rate8e"
+ >8</label>
+ <input type="radio" name="rating5" id="rate7e"><label for="rate7e"
+ >7</label>
+ <input type="radio" name="rating5" id="rate6e"><label for="rate6e"
+ >6</label>
+ <input type="radio" name="rating5" id="rate5e"><label for="rate5e"
+ >5</label>
+ <input type="radio" name="rating5" id="rate4e"><label for="rate4e"
+ >4</label>
+ <input type="radio" name="rating5" id="rate3e"><label for="rate3e"
+ >3</label>
+ <input type="radio" name="rating5" id="rate2e"><label for="rate2e"
+ >2</label>
+ <input type="radio" name="rating5" id="rate1e"><label for="rate1e"
+ >1</label>
+ 
+  </div>
+ <p>
+7. &nbsp &nbsp Enrollment process - reading enrolment 
+ </p>
+ <div class ="rating">
+ <input type="radio" name="rating6" id="rate10f"><label for="rate10f"
+ >10</label>
+ <input type="radio" name="rating6" id="rate9f"><label for="rate9f"
+ >9</label>
+ <input type="radio" name="rating6" id="rate8f"><label for="rate8f"
+ >8</label>
+ <input type="radio" name="rating6" id="rate7f"><label for="rate7f"
+ >7</label>
+ <input type="radio" name="rating6" id="rate6f"><label for="rate6f"
+ >6</label>
+ <input type="radio" name="rating6" id="rate5f"><label for="rate5f"
+ >5</label>
+ <input type="radio" name="rating6" id="rate4f"><label for="rate4f"
+ >4</label>
+ <input type="radio" name="rating6" id="rate3f"><label for="rate3f"
+ >3</label>
+ <input type="radio" name="rating6" id="rate2f"><label for="rate2f"
+ >2</label>
+ <input type="radio" name="rating6" id="rate1f"><label for="rate1f"
+ >1</label>
+ 
+  </div>
+ <p>
+8. &nbsp &nbsp Referrals - entering and updating in CAPlink
+ </p>
+ <div class ="rating">
+ <input type="radio" name="rating7" id="rate10g"><label for="rate10g"
+ >10</label>
+ <input type="radio" name="rating7" id="rate9g"><label for="rate9g"
+ >9</label>
+ <input type="radio" name="rating7" id="rate8g"><label for="rate8g"
+ >8</label>
+ <input type="radio" name="rating7" id="rate7g"><label for="rate7g"
+ >7</label>
+ <input type="radio" name="rating7" id="rate6g"><label for="rate6g"
+ >6</label>
+ <input type="radio" name="rating7" id="rate5g"><label for="rate5g"
+ >5</label>
+ <input type="radio" name="rating7" id="rate4g"><label for="rate4g"
+ >4</label>
+ <input type="radio" name="rating7" id="rate3g"><label for="rate3g"
+ >3</label>
+ <input type="radio" name="rating7" id="rate2g"><label for="rate2g"
+ >2</label>
+ <input type="radio" name="rating7" id="rate1g"><label for="rate1g"
+ >1</label>
+ 
+  </div>
+ <p>
+9. &nbsp &nbsp Referrals- interpreting data on the referral module 
+ </p>
+ <div class ="rating">
+ <input type="radio" name="rating8" id="rate10h"><label for="rate10h"
+ >10</label>
+ <input type="radio" name="rating8" id="rate9h"><label for="rate9h"
+ >9</label>
+ <input type="radio" name="rating8" id="rate8h"><label for="rate8h"
+ >8</label>
+ <input type="radio" name="rating8" id="rate7h"><label for="rate7h"
+ >7</label>
+ <input type="radio" name="rating8" id="rate6h"><label for="rate6h"
+ >6</label>
+ <input type="radio" name="rating8" id="rate5h"><label for="rate5h"
+ >5</label>
+ <input type="radio" name="rating8" id="rate4h"><label for="rate4h"
+ >4</label>
+ <input type="radio" name="rating8" id="rate3h"><label for="rate3h"
+ >3</label>
+ <input type="radio" name="rating8" id="rate2h"><label for="rate2h"
+ >2</label>
+ <input type="radio" name="rating8" id="rate1h"><label for="rate1h"
+ >1</label>
+ 
+  </div>
+ <p>
+10. &nbsp &nbsp Enrollment process - entry into formsite 
+ </p>
+ <div class ="rating">
+ <input type="radio" name="rating9" id="rate10i"><label for="rate10i"
+ >10</label>
+ <input type="radio" name="rating9" id="rate9i"><label for="rate9i"
+ >9</label>
+ <input type="radio" name="rating9" id="rate8i"><label for="rate8i"
+ >8</label>
+ <input type="radio" name="rating9" id="rate7i"><label for="rate7i"
+ >7</label>
+ <input type="radio" name="rating9" id="rate6i"><label for="rate6i"
+ >6</label>
+ <input type="radio" name="rating9" id="rate5i"><label for="rate5i"
+ >5</label>
+ <input type="radio" name="rating9" id="rate4i"><label for="rate4i"
+ >4</label>
+ <input type="radio" name="rating9" id="rate3i"><label for="rate3i"
+ >3</label>
+ <input type="radio" name="rating9" id="rate2i"><label for="rate2i"
+ >2</label>
+ <input type="radio" name="rating9" id="rate1i"><label for="rate1i"
+ >1</label>
+ 
+
+ </div>
+<div class="comments">
+ <p1><br>
+ 1. &nbsp &nbsp Please describe the top 3 most important changes that need to be made to CAPlink.
+ </p1>
+ <br>
+ <textarea name="" id="" cols="50" rows="20" placeholder="Please enter your response here:"></textarea>
+ <br><p2>
+ 2. &nbsp &nbsp Please provide your suggestions on how to make the PAZ data entry and reporting process better.
+ </p2>
+ <br>
+ <textarea name="" id="" cols="50" rows="20" placeholder="Please enter your response here:"></textarea>
+</div>
+</div>
