@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Lets Begin</title>
+  <!--CSS---------------->
+<style id="jsbin-css">
+*{
+  font-family: Sans-serif;
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+  font-size:16px;
+  font-weight:normal;
+  color:black;
+  text-decoration: none;
+  text-align:center;
+}
+h1{
+  text-align: center;
+  font-size:25px;
+  background-color: #3B4252;
+  color: white;
+  padding:60px;
+
+}
+
+a {
+  border:1px solid #C95F70;
+  padding:10px 25px;
+  color: #C95F70;
+  border-radius:5px;
+  margin-top:40px;
+  display:inline-block;
+}
+
+a:hover{
+  background-color:#C95F70;
+  color:white;
+}
+
+h2 {
+  font-size:30px;
+  padding:48px;
+}
+.quiz, .summary{
+  display: none;
+  
+  
+}
+.quiz ul{
+  list-style: none;
+  padding:0;
+}
+
+.quiz li{
+  cursor:pointer;
+}
+
+.selected {
+  
+  border: 2px solid Red;
+ 
+  background-size:58%;
+  background-position:center center;
+  background-repeat: no-repeat;
+}
+img {
+  position: relative;
+  height:50px;
+  width:400px;
+  display: inline-block;
+  margin-top: 9px;
+}
+
+img.show{
+  display:incline-block;
+}
+
+</style>
+</head>
+<body>
+  <div class="start">
+    <h1><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Game_of_Thrones_2011_logo.svg/1280px-Game_of_Thrones_2011_logo.svg.png"></h1>
+    
+    <p><a href="#" class="start-quiz"> Start Quiz</a></p>
+    <img src="https://i.imgur.com/AHF6Y9W.gif">
+  </div>
+  
+  
+  <div class="quiz">
+    <h2>Game of Thrones!!</h2>
+    <ul class="choices">
+      <li class="Choice">Choice 1</li>
+      <li class="Choice">Choice 2</li>
+      <li class="Choice">Choice 3</li>
+      <li class="Choice">Choice 4</li>
+      <li class="Choice">Choice 5</li>
+      <li class="Choice">Choice 6</li>
+      
+     
+    </ul>
+    <p><a href="a" class="submit-answer">Submit Answer</a></p>
+  </div>
+  
+  <div class="summary">
+    <h2>Quiz Summary</h2>
+    <p class="summary-text">You scored x out of y correct!</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Game_of_Thrones_2011_logo.svg/1280px-Game_of_Thrones_2011_logo.svg.png">
+    <a href="#">Restart Quiz</a>
+  </div>
+  
+<!--JAVASCRIPT-------------->
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+
+  <!--User can add as many questions as they want-->
+<script id="jsbin-javascript">
+var score =0,
+    CurrentQuestion =0,
+    questions = [
+  {
+    title:"Who is the true heir to the Iron Throne?",
+    choices: ['Daenarys Targaryen','Jon Snow','Cersei Lannister','Ned Stark'],
+    correct: 1 
+  },
+  {
+    title:"Which Irish actor plays the character Davos Seaworth?",
+    choices: ['Aiden Gillen', 'Ciaran Hinds', 'Liam Cunningham', 'Patrick Malahide'],
+     correct: 2 
+  },
+  {
+    title:"What relation is Ned Stark to Jon Snow?",
+    choices: ['Uncle', 'Father', 'Brother', 'Cousin'],
+     correct: 0 
+  },
+  
+  {
+    title:"Which George R. R. Martin series of fantasy novels is Game of Thrones based on?",
+    choices: ['Winter is Coming', 'The Great War', 'A Song of Fire and Ice', 'A Song of Ice and Fire'],
+    correct: 3
+  },
+      
+  {
+   title:"Who did Daenarys Targaryen marry in Season 1?",
+   choices: ['Khal Drogo', 'Dothraki', 'Jon Snow', 'Viserys Targaryen'],
+   correct: 0
+ },
+ {
+  title:"Can you name this Game of Thrones character?",
+  choices: ['Arya Stark', 'Sansa Stark', 'Brienne of Tarth','Margaery Tyrell'],
+  correct: 2
+ },
+      
+ {
+  title:"How do you watch Game of Thrones? Note: Randomly chosen correct answer!",
+  choices: ['Live on TV', 'Live on mobile device', 'Streaming','DVR'],
+  correct: 0
+ },
+ {
+  title:"This Game of Thrones character was best known for saying which word?",
+  choices: ['Open the door', 'Hold the door', 'Winter','Hodor'],
+  correct: 3
+ },
+ 
+  {
+  title:"Tough Question!: Who is known as The King Beyond the Wall?",
+  choices: ['Stannis Baratheon', 'Mance Rayder', 'The Night King','Samwell Tarly'],
+  correct: 1
+ },
+ 
+ {
+  title:"Name the actor who played Ramsay Snow Bolton but who almost played Jon Snow?",
+  choices: ['Iwan Rheon', 'Peter Dinklage', 'Nikolaj Coster Waldau', 'Conleth Hill'],
+  correct: 0
+ },
+ 
+ {
+  title:"How did King Tommen Baratheon meet his demise?",
+  choices: ['He was poisoned', 'Jumped from the Red Keep', 'Explosion', 'Nightshade drops'],
+  correct: 1
+ },
+      
+ 
+ 
+      
+];
+
+
+
+$(document).ready(function(){
+  
+  $('.start-quiz').click(function(e){
+    e.preventDefault();
+    $('.start').hide();
+    $('.quiz').show();
+    showQuestion();
+  });
+  
+  //user can change their answer
+  $('.quiz ul').on('click','li',function(){
+    $('.selected').removeClass('selected');
+    $(this).addClass('selected');
+    
+  });
+  
+  $('.quiz a').click(function(e){
+   e.preventDefault();//prevent from redirecting to google
+    if($('li.selected').length){
+      var guess = parseInt($('li.selected').attr('id'));
+      checkAnswer(guess);
+    } else {
+      alert('Please select an answer')
+    }
+  
+  });
+  
+  $('.summary a').click(function(e){
+    e.preventDefault();
+    restartQuiz();
+  });
+    
+});
+
+
+function showQuestion(){
+  var question = questions[CurrentQuestion];
+  $('.quiz h2').text(question.title);
+  $('.choices').html('');
+  for(var i=0; i<question.choices.length; i++){
+    $('.choices').append("<li id='"+i+"'>"+question.choices[i]+"</li>");
+  }
+  
+}  
+
+function checkAnswer(guess){
+  var question = questions[CurrentQuestion];
+  if(question.correct === guess){
+    score++;
+  }
+  
+  CurrentQuestion++;
+  if(CurrentQuestion >= questions.length){
+    showSummary();
+    
+  } else {
+    
+  showQuestion();
+  
+  }
+}  
+  
+
+
+function showSummary(){
+  $('.quiz').hide();
+  $('.summary').show();
+  $('.summary p').text("You scored " +score +" out of "+questions.length+" correct!");
+  
+}
+
+function restartQuiz(){
+  $('.summary').hide();
+  $('.start').show();
+  score =0;
+  CurrentQuestion =0;
+  showQuestion();
+  
+}
+</script>
+</body>
+</html>
