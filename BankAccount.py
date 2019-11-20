@@ -1,7 +1,8 @@
+#Ever wanted to know how to create a bank account? :-)
 import random
 
 class Bankaccount:
-    def __init__(self,nameIn, balanceIn, pinIn):#by saying self we have all access to those saying self
+    def __init__(self,nameIn, balanceIn, pinIn):#
         self.name=nameIn 
         self.balance=balanceIn
         self.pin=pinIn
